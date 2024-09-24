@@ -3,6 +3,8 @@ import inquirer from 'inquirer';
 import fs from 'node:fs';
 import { renderLicenseBadge, renderLicenseSection } from './utils/generateMarkdown.js';
 
+(function() {
+
 // TODO: Create an array of questions for user input
 const questions = [ 
     {
@@ -115,3 +117,4 @@ function init() {
 
 // Function call to initialize app
 init();
+}());
