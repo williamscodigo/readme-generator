@@ -56,7 +56,6 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, answers) {
     let readmeContent = 
-    //TODO: make badge clickable - were to go license section in readme or actual license website
 `# ${answers.title} ${renderLicenseBadge(answers.license)}
 
 ## Description
@@ -110,23 +109,9 @@ Reach me with additional questions at: ${answers.email}
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then(answers => {
-        //console.log(answers);
         writeToFile('README.md', answers);
     })
 }
 
 // Function call to initialize app
 init();
-
-
-//////////////////////////////////////////////////////////////////////////////
-
-/*
-
-## TODO:
-### NOTE: WE SHOULD HAVE A WAY TO MAKE SOME OF THIS SECTIONS OPTIONAL
-### IN THIS STRING Literal WE WILL AN if (provided) conditional
-### on prompt side, we will have a quenstion  like/example 'WOULD YOU LIKE TO PROVIDE A how-to-contribute SECTION TO YOUR README FILE? - continue prompt base on answer, or quit and generate README with given information
-### BETTER IDEA - PROMT USER TO CHECK BOXES WITH ALL SECTIONS THEY WANT THEIR README TO HAVE AND THEM PORMPT USER only FOR THAT INFORMATION - NOT SURE IF SETUP WILL WORK FINE WITH THIS SOLUTION APPROACH
-
-*/
